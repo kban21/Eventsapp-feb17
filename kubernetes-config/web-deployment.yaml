@@ -17,7 +17,10 @@ spec:
        ver: v1.0
    spec:
      containers:
-     - image: your-docker-hub-id/events-web:v1.0
+     - image: kbansal21/events-website:v1.0
        name: events-web
        ports:
        - containerPort: 8080
+       env:
+       - name: SERVER
+         value: "http://events-api-svc:8082"
